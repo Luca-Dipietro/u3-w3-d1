@@ -5,13 +5,16 @@ import { Link } from "react-router-dom";
 
 const Job = ({ data }) => {
   const dispatch = useDispatch();
-  const handleFavorites = () => {
-    dispatch({ type: "ADD_TO_FAVORITES", payload: data });
-  };
+
   return (
     <Row className="mx-0 mt-3 p-3 align-items-center" style={{ border: "1px solid #00000033", borderRadius: 4 }}>
       <Col xs={1}>
-        <Button type="button" onClick={handleFavorites}>
+        <Button
+          type="button"
+          onClick={() => {
+            dispatch({ type: "ADD_TO_FAVORITES", payload: data });
+          }}
+        >
           <FaRegStar />
         </Button>
       </Col>
