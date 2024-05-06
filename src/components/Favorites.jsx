@@ -11,7 +11,12 @@ const Favorites = () => {
     <Container>
       <Row>
         <Col className="my-3">
-          <h1 className="display-4">Favorite Companies</h1>
+          <h1 className="display-4">
+            Favorite Companies{" "}
+            <span className="display-6">
+              <Link to="/">Home</Link>
+            </span>
+          </h1>
           {favorites.map((company, index) => (
             <Row
               key={index}
